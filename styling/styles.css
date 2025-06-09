@@ -29,6 +29,8 @@ section#calculator{
   margin: 20px auto;
   padding: calc(10px + 1vw);
   border-radius: 5px;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 section#calculator #screen-operations{
@@ -39,7 +41,8 @@ section#calculator #screen-operations{
 }
 
 input{
-  height: 30px;
+  display: border;
+  height: 35px;
   border: none;
   border-bottom: 1px solid;
   padding: 5px;
