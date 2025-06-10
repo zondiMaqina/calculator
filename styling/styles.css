@@ -5,8 +5,18 @@
   list-style-type: none;
 }
 
+:root{
+  --calculator-bg: #001219;
+  --eql-bg: #590D22;
+  --font: white;
+  --lighter: #001524;
+}
+
 body{
   min-height: 100vh;
+  background: url("../images/background/Sprinkle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header{
@@ -16,6 +26,7 @@ header{
   padding: 0 10px;
   font-size: clamp(12px, calc(20px + 1vw), 30px);
   font-weight: bold;
+  color: var(--font);
 }
 
 header ul#technologies-list{
@@ -29,13 +40,14 @@ header ul li img{
 
 
 section#calculator{
-  border: 1px solid;
   margin: 50px auto;
   padding: calc(10px + 1vw);
   border-radius: 5px;
   display: flex;
   width: min(70%, 400px);
   flex-flow: column nowrap;
+  box-shadow: 0px 0px 3px black;
+  background-color: var(--calculator-bg);
 }
 
 section#calculator #screen-operations{
@@ -51,6 +63,7 @@ input{
   border: none;
   border-bottom: 1px solid;
   padding: 5px;
+  background: transparent;
 }
 
 input:focus{
@@ -60,6 +73,13 @@ input:focus{
 button{
   padding: calc(5px + 1vw);
   border: none;
+  background-color: var(--lighter);
+  color: var(--font);
+  border-radius: 5px;
+}
+
+button:hover{
+  filter: brightness(150%);
 }
 
 button.zero{
@@ -69,4 +89,5 @@ button.zero{
 button.equals{
   grid-column: 4 / 5;
   grid-row: 4 / 6;
+  background-color: var(--eql-bg);
 }
